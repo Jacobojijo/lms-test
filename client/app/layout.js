@@ -1,16 +1,17 @@
 import { Geist, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { Footer, Navbar } from "@/components";
 import { AuthProvider } from "@/context/AuthContext";
+import LayoutWrapper from "./LayoutWrapper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// Initialize the fonts
+const geistSans = Geist({ 
+  subsets: ['latin'],
+  variable: '--font-geist'
 });
 
 const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
+  subsets: ['latin'],
+  variable: '--font-playfair'
 });
 
 export const metadata = {
@@ -21,15 +22,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${playfair.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${playfair.variable} antialiased`}>
         <AuthProvider>
-          <div className="flex flex-col min-h-screen overflow-x-hidden">
-            <Navbar />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-          </div>
+          <LayoutWrapper>{children}</LayoutWrapper>
         </AuthProvider>
       </body>
     </html>

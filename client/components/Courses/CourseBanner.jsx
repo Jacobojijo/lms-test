@@ -185,59 +185,12 @@ const CourseBanner = ({ enrollments }) => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center max-w-4xl mx-auto">
             <div className="mb-4 md:mb-0 w-full md:w-auto">
-              <span style={{ color: "#5c5c5c" }}>Your progress:</span>
-              <div className="mt-2 w-full md:w-64 lg:w-80 h-2 md:h-3 bg-white bg-opacity-40 rounded-full overflow-hidden">
-                <div
-                  className="h-full rounded-full"
-                  style={{
-                    width: "35%",
-                    background: `linear-gradient(to right, ${lightRose}, ${lightBeige})`,
-                  }}
-                ></div>
-              </div>
+              
             </div>
             <div className="flex space-x-6 md:space-x-10 lg:space-x-16">
+              
               <div className="text-center">
-                <p
-                  className="text-xl lg:text-2xl font-bold"
-                  style={{ color: "#5e4c41" }}
-                >
-                  3
-                </p>
-                <p
-                  className="text-sm lg:text-base"
-                  style={{ color: "#5c5c5c" }}
-                >
-                  Completed
-                </p>
-              </div>
-              <div className="text-center">
-                <p
-                  className="text-xl lg:text-2xl font-bold"
-                  style={{ color: "#5e4c41" }}
-                >
-                  12
-                </p>
-                <p
-                  className="text-sm lg:text-base"
-                  style={{ color: "#5c5c5c" }}
-                >
-                  Lessons
-                </p>
-              </div>
-              <div className="text-center">
-                <p
-                  className="text-xl lg:text-2xl font-bold"
-                  style={{ color: "#5e4c41" }}
-                >
-                  6
-                </p>
-                <p
-                  className="text-sm lg:text-base"
-                  style={{ color: "#5c5c5c" }}
-                >
-                  Hours
-                </p>
+                
               </div>
             </div>
           </div>
