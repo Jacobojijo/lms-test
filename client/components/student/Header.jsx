@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavbarMenu } from "../../mockData/data";
+import { NavbarMenu } from "../../mockData/data-two";
 import { MdMenu, MdClose } from "react-icons/md";
 import ResponsiveMenu from "../../components/Navbar/ResponsiveMenu";
 import { motion } from "framer-motion";
@@ -96,7 +96,7 @@ const Header = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Link href="/" className="flex items-center">
+            <Link href="/student/dashboard" className="flex items-center">
               <img
                 src={"/assets/logo.png"}
                 alt="Heritage Language School"
