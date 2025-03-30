@@ -8,6 +8,8 @@ import { useRouter } from "next/navigation";
 
 const RegisterPage = () => {
   const router = useRouter();
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+  
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -39,7 +41,7 @@ const RegisterPage = () => {
     }
 
     try {
-      await axios.post(`${BASE_API_URL}/auth/register`, formData);
+      await axios.post(`${BACKEND_URL}/api/auth/register`, formData);
       // Redirect to verification page with email
       router.push(`/verify-email?email=${encodeURIComponent(formData.email)}`);
     } catch (err) {
